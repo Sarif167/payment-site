@@ -1,22 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Payment Page</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+
+<div id="loader" class="loader">
+<div class="spinner"></div>
+<p>Opening Payment...</p>
+</div>
 
 <div class="container">
 
 <img src="logo.png" class="logo">
 
-<h1>Payment Page</h1>
+<h1>💳 Payment Page</h1>
+
+<p class="subtitle">
+Secure BharatPe UPI Payment
+</p>
 
 <img src="qr.png" class="qr">
+
+<div class="upiBox">
+
+<p>UPI ID</p>
+
+<input
+id="upi"
+type="text"
+value="BHARATPE.9QOQKOZ8Q466572@unitype"
+readonly>
+
+<button class="copyBtn"
+onclick="copyUPI()">
+Copy UPI ID
+</button>
+
+</div>
 
 <input
 id="name"
@@ -28,12 +57,32 @@ id="amount"
 type="number"
 placeholder="Enter Amount">
 
-<button onclick="payNow()">
-Pay Now
+<input
+id="txn"
+type="text"
+placeholder="Transaction ID">
+
+<button
+class="payBtn"
+onclick="payNow()">
+
+🚀 Pay Now
+
 </button>
 
-<div id="loader" style="display:none;">
-Loading...
+<button
+class="paidBtn"
+onclick="paid()">
+
+✅ I Have Paid
+
+</button>
+
+<div class="footer">
+
+Telegram :
+<b>@Botmaster55</b>
+
 </div>
 
 </div>
