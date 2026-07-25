@@ -1,93 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Payment Page</title>
-
-<link rel="stylesheet" href="style.css">
-
+<title>UPI Payment</title>
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#f2f2f2;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+.box{
+background:#fff;
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,.2);
+width:320px;
+text-align:center;
+}
+input{
+width:100%;
+padding:12px;
+margin:15px 0;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:18px;
+box-sizing:border-box;
+}
+button{
+width:100%;
+padding:12px;
+background:#00a651;
+color:#fff;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+}
+button:hover{
+background:#008a43;
+}
+</style>
 </head>
-
 <body>
 
-<div id="loader" class="loader">
-<div class="spinner"></div>
-<p>Opening Payment...</p>
-</div>
+<div class="box">
+<h2>UPI Payment</h2>
+<p>Enter Amount</p>
 
-<div class="container">
+<input type="number" id="amount" placeholder="Enter Amount">
 
-<img src="logo.png" class="logo">
-
-<h1>💳 Payment Page</h1>
-
-<p class="subtitle">
-Secure BharatPe UPI Payment
-</p>
-
-<img src="qr.png" class="qr">
-
-<div class="upiBox">
-
-<p>UPI ID</p>
-
-<input
-id="upi"
-type="text"
-value="BHARATPE.9QOQKOZ8Q466572@unitype"
-readonly>
-
-<button class="copyBtn"
-onclick="copyUPI()">
-Copy UPI ID
-</button>
+<button onclick="pay()">Pay Now</button>
 
 </div>
 
-<input
-id="name"
-type="text"
-placeholder="Customer Name">
+<script>
+function pay(){
+let amount=document.getElementById("amount").value;
 
-<input
-id="amount"
-type="number"
-placeholder="Enter Amount">
+if(amount==""){
+alert("Enter Amount");
+return;
+}
 
-<input
-id="txn"
-type="text"
-placeholder="Transaction ID">
+let upi="upi://pay?pa=BHARATPE.9Q0Q0K0Z8Q466572@unitype&pn=Amir%20Bhai&am="+amount+"&cu=INR";
 
-<button
-class="payBtn"
-onclick="payNow()">
-
-🚀 Pay Now
-
-</button>
-
-<button
-class="paidBtn"
-onclick="paid()">
-
-✅ I Have Paid
-
-</button>
-
-<div class="footer">
-
-Telegram :
-<b>@Botmaster55</b>
-
-</div>
-
-</div>
-
-<script src="script.js"></script>
+window.location.href=upi;
+}
+</script>
 
 </body>
 </html>
