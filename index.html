@@ -11,45 +11,44 @@ body{
 margin:0;
 font-family:Arial,sans-serif;
 background:#f2f2f2;
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
 }
 
 .box{
-background:#fff;
-width:340px;
-padding:20px;
+background:white;
+width:300px;
+padding:18px;
 border-radius:15px;
-box-shadow:0 0 15px rgba(0,0,0,.2);
+box-shadow:0 5px 20px #ccc;
 text-align:center;
 }
 
 .logo{
-width:90px;
-height:90px;
+width:65px;
+height:65px;
 border-radius:50%;
 object-fit:cover;
-margin-bottom:10px;
 }
 
 h2{
-margin:10px 0;
+font-size:24px;
+margin:10px 0 5px;
 }
 
 .name{
-font-size:18px;
+font-size:16px;
 color:#555;
-margin-bottom:20px;
 font-weight:bold;
+margin-bottom:15px;
 }
 
 input{
 width:100%;
 padding:12px;
-margin-bottom:15px;
-font-size:18px;
+font-size:16px;
 border:1px solid #ccc;
 border-radius:8px;
 box-sizing:border-box;
@@ -57,12 +56,11 @@ box-sizing:border-box;
 
 button{
 width:100%;
-padding:14px;
-font-size:18px;
-border:none;
+padding:12px;
+margin-top:12px;
+font-size:17px;
+border:0;
 border-radius:8px;
-cursor:pointer;
-margin-top:10px;
 color:white;
 }
 
@@ -70,16 +68,8 @@ color:white;
 background:#00a651;
 }
 
-.pay:hover{
-background:#008a43;
-}
-
 .telegram{
 background:#0088cc;
-}
-
-.telegram:hover{
-background:#0077b5;
 }
 
 </style>
@@ -99,17 +89,20 @@ Payment To: Sekh Sarif
 </div>
 
 <input 
-type="number" 
-id="amount" 
+type="number"
+id="amount"
 placeholder="Enter Amount">
+
 
 <button class="pay" onclick="pay()">
 💳 Pay Now
 </button>
 
+
 <button class="telegram" onclick="winnerScreenshot()">
-📸 Woner Screenshot
+📸 Owner Screenshot
 </button>
+
 
 </div>
 
@@ -125,7 +118,7 @@ alert("Enter Amount");
 return;
 }
 
-let upi="upi://pay?pa=BHARATPE.9Q0Q0K0Z8Q466572@unitype&pn=Amir%20Bhai&am="+amount+"&cu=INR";
+let upi="upi://pay?pa=BHARATPE.9Q0Q0K0Z8Q466572@unitype&pn=Sekh%20Sarif&am="+amount+"&cu=INR";
 
 window.location.href=upi;
 
