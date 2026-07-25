@@ -1,78 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UPI Payment</title>
-<style>
-body{
-font-family:Arial,sans-serif;
-background:#f2f2f2;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-margin:0;
-}
-.box{
-background:#fff;
-padding:20px;
-border-radius:15px;
-box-shadow:0 0 15px rgba(0,0,0,.2);
-width:320px;
-text-align:center;
-}
-input{
-width:100%;
-padding:12px;
-margin:15px 0;
-border:1px solid #ccc;
-border-radius:8px;
-font-size:18px;
-box-sizing:border-box;
-}
-button{
-width:100%;
-padding:12px;
-background:#00a651;
-color:#fff;
-border:none;
-border-radius:8px;
-font-size:18px;
-cursor:pointer;
-}
-button:hover{
-background:#008a43;
-}
-</style>
+<title>Payment Page</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="box">
-<h2>UPI Payment</h2>
-<p>Enter Amount</p>
+<div class="container">
 
-<input type="number" id="amount" placeholder="Enter Amount">
+<img src="logo.png" class="logo">
 
-<button onclick="pay()">Pay Now</button>
+<h1>Payment Page</h1>
+
+<img src="qr.png" class="qr">
+
+<input
+id="name"
+type="text"
+placeholder="Customer Name">
+
+<input
+id="amount"
+type="number"
+placeholder="Enter Amount">
+
+<button onclick="payNow()">
+Pay Now
+</button>
+
+<div id="loader" style="display:none;">
+Loading...
+</div>
 
 </div>
 
-<script>
-function pay(){
-let amount=document.getElementById("amount").value;
-
-if(amount==""){
-alert("Enter Amount");
-return;
-}
-
-let upi="upi://pay?pa=BHARATPE.9Q0Q0K0Z8Q466572@unitype&pn=Amir%20Bhai&am="+amount+"&cu=INR";
-
-window.location.href=upi;
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
