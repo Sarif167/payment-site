@@ -7,76 +7,86 @@
 
 <style>
 body{
+margin:0;
 font-family:Arial,sans-serif;
 background:#f2f2f2;
 display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
-margin:0;
 }
 
 .box{
 background:#fff;
+width:340px;
 padding:20px;
 border-radius:15px;
 box-shadow:0 0 15px rgba(0,0,0,.2);
-width:320px;
 text-align:center;
+}
+
+h2{
+margin-bottom:20px;
 }
 
 input{
 width:100%;
 padding:12px;
-margin:15px 0;
+margin-bottom:15px;
+font-size:18px;
 border:1px solid #ccc;
 border-radius:8px;
-font-size:18px;
 box-sizing:border-box;
 }
 
 button{
 width:100%;
-padding:12px;
+padding:14px;
+font-size:18px;
 border:none;
 border-radius:8px;
-font-size:18px;
 cursor:pointer;
-color:white;
 margin-top:10px;
+color:white;
 }
 
-.paybtn{
+.pay{
 background:#00a651;
 }
 
-.paybtn:hover{
+.pay:hover{
 background:#008a43;
 }
 
-.ssbtn{
+.telegram{
 background:#0088cc;
 }
 
-.ssbtn:hover{
-background:#006fa6;
+.telegram:hover{
+background:#0077b5;
 }
 </style>
 
 </head>
+
 <body>
 
 <div class="box">
 
 <h2>UPI Payment</h2>
 
-<p>Enter Amount</p>
+<input
+type="number"
+id="amount"
+placeholder="Enter Amount">
 
-<input type="number" id="amount" placeholder="Enter Amount">
+<button class="pay" onclick="pay()">
+💳 Pay Now
+</button>
 
-<button class="paybtn" onclick="pay()">💳 Pay Now</button>
-
-<button class="ssbtn" onclick="winnerScreenshot()">📸 Woner Screenshot</button>
+<button class="telegram" onclick="winnerScreenshot()">
+📸 Woner Screenshot
+</button>
 
 </div>
 
