@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UPI Payment</title>
+<title>UPI Payment Method</title>
 
 <style>
 
@@ -19,49 +19,62 @@ align-items:center;
 
 .box{
 background:white;
-width:300px;
-padding:18px;
-border-radius:15px;
-box-shadow:0 5px 20px #ccc;
+width:340px;
+padding:25px 20px;
+border-radius:20px;
+box-shadow:0 5px 25px rgba(0,0,0,0.15);
 text-align:center;
 }
 
 .logo{
-width:150px;
-height:150px;
+width:120px;
+height:120px;
 border-radius:50%;
 object-fit:cover;
+margin-bottom:15px;
 }
 
 h2{
-font-size:24px;
-margin:10px 0 5px;
+font-size:32px;
+margin:10px 0;
+font-weight:700;
+background:linear-gradient(90deg,#007bff,#6a00ff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.payto{
+font-size:18px;
+color:#555;
+font-weight:bold;
+margin-top:20px;
 }
 
 .name{
-font-size:16px;
-color:#555;
-font-weight:bold;
-margin-bottom:15px;
+font-size:36px;
+font-weight:800;
+color:#5a00ff;
+margin:10px 0 25px;
 }
 
 input{
 width:100%;
-padding:12px;
-font-size:16px;
+padding:15px;
+font-size:18px;
 border:1px solid #ccc;
-border-radius:8px;
+border-radius:10px;
 box-sizing:border-box;
 }
 
 button{
 width:100%;
-padding:12px;
-margin-top:12px;
-font-size:17px;
-border:0;
-border-radius:8px;
+padding:16px;
+font-size:20px;
+border:none;
+border-radius:12px;
+margin-top:15px;
 color:white;
+cursor:pointer;
 }
 
 .pay{
@@ -76,17 +89,23 @@ background:#0088cc;
 
 </head>
 
+
 <body>
 
 <div class="box">
 
 <img src="logo.png" class="logo">
 
-<h2>UPI Payment</h2>
+<h2>UPI Payment Method</h2>
+
+<div class="payto">
+Payment To:
+</div>
 
 <div class="name">
-Payment To: Sekh Sarif
+Sekh Sarif
 </div>
+
 
 <input 
 type="number"
@@ -132,6 +151,7 @@ window.open("https://t.me/botmaster55","_blank");
 }
 
 </script>
+
 
 </body>
 </html>
